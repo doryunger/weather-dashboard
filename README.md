@@ -1,6 +1,6 @@
 # Dynamic Weather Dashboard
 
-> The dashboard is a Vue.js project which integrates Fusioncharts and Amcharts elements
+> The dashboard is a Vue.js project which integrates [Fusioncharts](https://www.fusioncharts.com/) and [Amcharts4](https://www.amcharts.com/docs/v4/) elements
 
 ![dashboard](images/dashboard.gif)
 
