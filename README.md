@@ -1,6 +1,8 @@
-# Vue-FusionCharts Weather Dashboard
+# Dynamic Weather Dashboard
 
-> A Vue.js project
+> The dashboard is a Vue.js project which integrates Fusioncharts and Amcharts elements
+
+![dashboard](images/dashboard.gif)
 
 ## Build Setup
 
@@ -14,5 +16,3 @@ npm run dev
 # build for production with minification
 npm run build
 ```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
