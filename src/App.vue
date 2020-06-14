@@ -264,6 +264,7 @@ export default {
       this.lat=coords_array.lat;
       this.long=coords_array.long;
       this.full_location=coords_array.full_location;
+      this.makeTempVarTodayEmpty();
       
     },
 
@@ -330,7 +331,8 @@ export default {
     },
     getSetCurrentTime: function() {
       var currentTime = this.rawWeatherData.currently.time;
-      var timezone = this.getTimezone();
+      //var timezone = this.getTimezone();
+      var timezone =this.rawWeatherData.timezone;
       this.currentWeather.time = this.unixToHuman(
         timezone,
         currentTime
@@ -389,7 +391,8 @@ export default {
       return this.rawWeatherData.daily.data[0];
     },
     getSetTodayTempHighLowWithTime: function() {
-      var timezone = this.getTimezone();
+      //var timezone = this.getTimezone();
+      var timezone =this.rawWeatherData.timezone;
       var todayDetails = this.getTodayDetails();
       this.currentWeather.todayHighLow.todayTempHigh = this.fahToCel(
         todayDetails.temperatureMax
@@ -411,7 +414,8 @@ export default {
     },
     getSetHourlyTempInfoToday: function() {
       var unixTime = this.rawWeatherData.currently.time;
-      var timezone = this.getTimezone();
+      //var timezone = this.getTimezone();
+      var timezone =this.rawWeatherData.timezone;
       var todayMonthDate = this.unixToHuman(timezone, unixTime).onlyMonthDate;
       var hourlyData = this.getHourlyInfoToday();
       for (var i = 0; i < hourlyData.length; i++) {
